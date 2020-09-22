@@ -3,15 +3,26 @@ package adder;
 public class Main {
 
     public static void main(String[] args) {
-        try {
+        try
+        {
             int result = addArguments(args);
             System.out.println(result);
-        } catch (Exception e) {
-            System.err.println("Please provide two integers to add");
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.err.println("There are not enough arguments in this array");
+        }
+        catch (NumberFormatException e)
+        {
+            System.err.println("It is an invalid argument");
         }
     }
-
     private static int addArguments(String[] args) {
-        return Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
+        int sumVal = 0;
+        for(int i = 0; i < args.length; i++)
+        {
+            sumVal = sumVal + Integer.valueOf(args[i]);
+        }
+        return sumVal;
     }
 }
