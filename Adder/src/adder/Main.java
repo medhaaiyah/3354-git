@@ -19,9 +19,20 @@ public class Main {
     }
     private static int addArguments(String[] args) {
         int sumVal = 0;
-        for(int i = 0; i < args.length; i++)
+        if (args[0].contains("-"))
         {
-            sumVal = sumVal + Integer.valueOf(args[i]);
+            for(int i = 0; i < args.length; i++)
+            {
+                sumVal += Integer.valueOf(args[i]);
+            }
+            sumVal = (sumVal * -1);
+        }
+        else
+        {
+            for(int i = 0; i < args.length; i++)
+            {
+                sumVal += Integer.valueOf(args[i]);
+            }
         }
         return sumVal;
     }
