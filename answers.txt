@@ -1,0 +1,6 @@
+1. After completeling step 8, there are 7 commits that exist in the repository history.
+2. The file .gitignore was added on Tuesday, January 24th 2017, at 22:28:11
+3. There is a difference between git log and git status. Git log focuses mostly on committed history and allows the user to look at specific changes whereas git status allows you to investigate the staging area and the working directory.
+4. Untracked files exist locally but is not a part of a particular Git repository. Because of this, the file's change history will not be recorded. Unstaged files exist in a user's working directory but the particular changes to a Git repository is not recorded in the version history yet.
+5. The git checkout command allows the user to navigate between multiple branches whereas git reset is used for undoing certain changes.
+6. If you try to pull remote changes when there are uncommitted changes in the working directory, then you will get an error message saying "The working copy 'projectName' has uncommitted changes."
